@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRussianLng = new System.Windows.Forms.Button();
+            this.btnEnglishLng = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnRussianLng
             // 
-            this.button1.Location = new System.Drawing.Point(117, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 58);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRussianLng.Location = new System.Drawing.Point(117, 105);
+            this.btnRussianLng.Name = "btnRussianLng";
+            this.btnRussianLng.Size = new System.Drawing.Size(127, 58);
+            this.btnRussianLng.TabIndex = 0;
+            this.btnRussianLng.Text = "button1";
+            this.btnRussianLng.UseVisualStyleBackColor = true;
+            this.btnRussianLng.Click += new System.EventHandler(this.selectRussian);
             // 
-            // button2
+            // btnEnglishLng
             // 
-            this.button2.Location = new System.Drawing.Point(312, 105);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 58);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEnglishLng.Location = new System.Drawing.Point(312, 105);
+            this.btnEnglishLng.Name = "btnEnglishLng";
+            this.btnEnglishLng.Size = new System.Drawing.Size(139, 58);
+            this.btnEnglishLng.TabIndex = 1;
+            this.btnEnglishLng.Text = "button2";
+            this.btnEnglishLng.UseVisualStyleBackColor = true;
+            this.btnEnglishLng.Click += new System.EventHandler(this.btnEnglishLng_Click);
             // 
             // button3
             // 
@@ -66,8 +68,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 404);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEnglishLng);
+            this.Controls.Add(this.btnRussianLng);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -76,9 +78,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRussianLng;
+        private System.Windows.Forms.Button btnEnglishLng;
         private System.Windows.Forms.Button button3;
+
     }
 }
 

@@ -16,5 +16,30 @@ namespace ATM
         {
             InitializeComponent();
         }
+
+        InsertPinWindow insertPinWindow = new InsertPinWindow();
+        private void selectRussian(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (sender.Equals(btnRussianLng))
+            {
+                // Switch the language
+                insertPinWindow.setLanguage(0);
+                insertPinWindow.ShowDialog();
+            }
+            this.Show();
+        }
+
+        private void btnEnglishLng_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            if (sender.Equals(btnEnglishLng))
+            {
+                // Switch the language
+                insertPinWindow.setLanguage(1);
+                insertPinWindow.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }
