@@ -51,13 +51,44 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GeneralMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralMenu.Designer.cs">
+      <DependentUpon>GeneralMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralWindow.Designer.cs">
+      <DependentUpon>GeneralWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertPinWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LanguageHelper.cs" />
+    <Compile Include="LanguageSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TakeCashWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeCashWindow.Designer.cs">
+      <DependentUpon>TakeCashWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction.cs" />
+    <Compile Include="WithReceiptWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithReceiptWindow.Designer.cs">
+      <DependentUpon>WithReceiptWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlHelper.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralMenu.resx">
+      <DependentUpon>GeneralMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertPinWindow.resx">
       <DependentUpon>InsertPinWindow.cs</DependentUpon>
@@ -71,6 +102,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TakeCashWindow.resx">
+      <DependentUpon>TakeCashWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithReceiptWindow.resx">
+      <DependentUpon>WithReceiptWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

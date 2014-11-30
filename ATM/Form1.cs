@@ -17,26 +17,38 @@ namespace ATM
             InitializeComponent();
         }
 
-        InsertPinWindow insertPinWindow = new InsertPinWindow();
+        string _xmlPath = @"d:\\languages.xml";
+        InsertingPinWindow insertPinWindow = new InsertingPinWindow();
+
+        LanguageSettings RusLanguageSettings = new LanguageSettings("RUS", "Пожалуйста, введите пин", "Отмена", "Изменить", "Подтвердить", "Снять наличные","Проверить баланс", "Перевод", "Платежи","Депозит","Другие операции", "С чеком", "Без чека");
+        LanguageSettings EngLanguageSettings = new LanguageSettings("ENG", "Insert pin-code, please", "Cancel", "Correct", "Confirm", "Withdrawal","Check balance","Transfer","Payments","Deposit","Other Services","With receipt","Without receipt");
+       
+
         private void selectRussian(object sender, EventArgs e)
         {
+            // create xml-file
+            //XmlHelper.CreateLanguageSettings(RusLanguageSettings, _xmlPath);
+
             this.Hide();
+
+            // User chose Russian language
             if (sender.Equals(btnRussianLng))
             {
                 // Switch the language
-                insertPinWindow.setLanguage(0);
+                insertPinWindow.SetLanguage(RusLanguageSettings);
                 insertPinWindow.ShowDialog();
             }
             this.Show();
         }
 
+        // user chose English language
         private void btnEnglishLng_Click(object sender, EventArgs e)
         {
             this.Hide();
             if (sender.Equals(btnEnglishLng))
             {
                 // Switch the language
-                insertPinWindow.setLanguage(1);
+                insertPinWindow.SetLanguage(EngLanguageSettings);
                 insertPinWindow.ShowDialog();
             }
             this.Show();
