@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRussianLng = new System.Windows.Forms.Button();
-            this.btnEnglishLng = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnEnglishLng = new System.Windows.Forms.Button();
+            this.btnRussianLng = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnRussianLng
-            // 
-            this.btnRussianLng.Location = new System.Drawing.Point(117, 105);
-            this.btnRussianLng.Name = "btnRussianLng";
-            this.btnRussianLng.Size = new System.Drawing.Size(127, 58);
-            this.btnRussianLng.TabIndex = 0;
-            this.btnRussianLng.Text = "button1";
-            this.btnRussianLng.UseVisualStyleBackColor = true;
-            this.btnRussianLng.Click += new System.EventHandler(this.selectRussian);
-            // 
-            // btnEnglishLng
-            // 
-            this.btnEnglishLng.Location = new System.Drawing.Point(312, 105);
-            this.btnEnglishLng.Name = "btnEnglishLng";
-            this.btnEnglishLng.Size = new System.Drawing.Size(139, 58);
-            this.btnEnglishLng.TabIndex = 1;
-            this.btnEnglishLng.Text = "button2";
-            this.btnEnglishLng.UseVisualStyleBackColor = true;
-            this.btnEnglishLng.Click += new System.EventHandler(this.btnEnglishLng_Click);
             // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(519, 105);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 58);
+            this.button3.Size = new System.Drawing.Size(148, 82);
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnEnglishLng
+            // 
+            this.btnEnglishLng.Image = global::ATM.Properties.Resources.uk;
+            this.btnEnglishLng.Location = new System.Drawing.Point(312, 105);
+            this.btnEnglishLng.Name = "btnEnglishLng";
+            this.btnEnglishLng.Size = new System.Drawing.Size(139, 82);
+            this.btnEnglishLng.TabIndex = 1;
+            this.btnEnglishLng.UseVisualStyleBackColor = true;
+            this.btnEnglishLng.Click += new System.EventHandler(this.btnEnglishLng_Click);
+            // 
+            // btnRussianLng
+            // 
+            this.btnRussianLng.Image = global::ATM.Properties.Resources.flag_russia;
+            this.btnRussianLng.Location = new System.Drawing.Point(117, 105);
+            this.btnRussianLng.Name = "btnRussianLng";
+            this.btnRussianLng.Size = new System.Drawing.Size(127, 82);
+            this.btnRussianLng.TabIndex = 0;
+            this.btnRussianLng.UseVisualStyleBackColor = true;
+            this.btnRussianLng.Click += new System.EventHandler(this.selectRussian);
             // 
             // Form1
             // 

@@ -15,6 +15,8 @@ namespace ATM
 
         // Labels 
         private string _lbPleaseInsertPin; // Insert pin label
+        private string _lbIncorrectPin;    // Incorrect pin label
+        private string _lbInsufficientFunds; // Insufficient Funds
 
         // Buttons
         // Insert Pin window
@@ -34,6 +36,9 @@ namespace ATM
         // WithReceiptWindow
         private string _btnWithReceipt;     // With receipt
         private string _btnWithoutReceipt;  // Without Receipt
+
+        // Window for taking money
+        private string _btnAnotherAmount;  // take another amount
 
         #region Constructors
         public LanguageSettings() { }
@@ -57,7 +62,11 @@ namespace ATM
                         string btnDeposit,
                         string btnOtherServices,
                         string btnWithReceipt,
-                        string btnWithoutReceipt) 
+                        string btnWithoutReceipt,
+                        string btnAnotherAmount,
+                        string lbIncorrectPin,
+                        string lbInsufficientFunds
+           ) 
         {
             Language = language;
             LblPleaseInsertPin = lblPleaseInsertPin;
@@ -72,7 +81,9 @@ namespace ATM
             BtnOtherServices = btnOtherServices;
             BtnWithReceipt = btnWithReceipt;
             BtnWithoutReceipt = btnWithoutReceipt;
-           
+            BtnTakeAnotherAmount = btnAnotherAmount;
+            LbIncorrectPin = lbIncorrectPin;
+            LbInsufficientFunds = lbInsufficientFunds;
         }
 
         #endregion
@@ -89,6 +100,18 @@ namespace ATM
         {
             get { return _lbPleaseInsertPin;}
             set {_lbPleaseInsertPin = value;}
+        }
+
+        public string LbIncorrectPin
+        {
+            get { return _lbIncorrectPin; }
+            set { _lbIncorrectPin = value; }
+        }
+
+        public string LbInsufficientFunds
+        {
+            get { return _lbInsufficientFunds; }
+            set {_lbInsufficientFunds = value; }
         }
 
         // Buttons
@@ -126,6 +149,12 @@ namespace ATM
         {
             get { return _btnTransfer; }
             set { _btnTransfer = value; }
+        }
+
+        public string BtnTakeAnotherAmount
+        {
+            get { return _btnAnotherAmount; }
+            set { _btnAnotherAmount = value; }
         }
 
         public string BtnPayments { get; set; }

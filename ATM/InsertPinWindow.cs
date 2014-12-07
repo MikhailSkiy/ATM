@@ -20,6 +20,8 @@ namespace ATM
         private Label lbPleaseInsertPin;
 
         GeneralMenu generalMenu = new GeneralMenu();
+        TakeCashWindow takeCashWindow = new TakeCashWindow();
+        IncorrectPin incorrectPin = new IncorrectPin();
     
         public InsertingPinWindow() 
         {
@@ -27,7 +29,7 @@ namespace ATM
         }
 
         /// <summary>
-        /// Set the language for all controls
+        /// Set the language for all controls. YOU SHOULD WRITE ALL WINDOWS WHERE IT IS IMPORTANT TO SWITCH LANGUAGE
         /// </summary>
         /// <param name="language">
         /// the member of enum ConstantsForLocalization
@@ -42,12 +44,21 @@ namespace ATM
                     ChangeLabels(this, languageSettings);
                     // Switch language for GeneralMenu
                     generalMenu.SetLanguage (languageSettings);
+                    // Switch language for TakeCashWindow
+                    takeCashWindow.SetLanguage(languageSettings);
+                    // Switch language for incorrectPin window
+                    incorrectPin.SetLanguage(languageSettings);
+
                     break;
                 case "ENG":
                     // Switch language for InsertPinWindow
                     ChangeLabels(this, languageSettings);
                     // Switch language for GeneralMenu
                     generalMenu.SetLanguage(languageSettings);
+                    // Switch language for TakeCashWindow
+                    takeCashWindow.SetLanguage(languageSettings);
+                    // Switch language for incorrectPin window
+                    incorrectPin.SetLanguage(languageSettings);
                     break;
                 default:
                     break;
@@ -82,9 +93,11 @@ namespace ATM
             // tbInsertPin
             // 
             this.tbInsertPin.Location = new System.Drawing.Point(224, 142);
+            this.tbInsertPin.MaxLength = 4;
             this.tbInsertPin.Name = "tbInsertPin";
             this.tbInsertPin.Size = new System.Drawing.Size(223, 20);
             this.tbInsertPin.TabIndex = 1;
+            this.tbInsertPin.UseSystemPasswordChar = true;
             // 
             // btnConfirm
             // 
@@ -131,7 +144,13 @@ namespace ATM
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             this.Hide();
-            generalMenu.ShowDialog();
+
+            if (this.tbInsertPin.Text == "1234")
+            {
+                generalMenu.ShowDialog();
+            }
+            else incorrectPin.ShowDialog();
+
             this.Show();
         }
     }

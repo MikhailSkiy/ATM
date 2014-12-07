@@ -13,8 +13,9 @@ namespace ATM
     {
         #region Private variables
 
-        string _date;               // The date of transaction
-        int _countOfMoney;          // Amount of money whcih was taken
+        string _date;                   // The date of transaction
+        int _countOfMoney;           // Amount of money whcih was taken
+        int _total;                  // Amount of money on the user account
 
         #endregion
 
@@ -22,9 +23,12 @@ namespace ATM
         public string Date { get; set; }
         public int CountOfMoney 
         {
-            get { return _countOfMoney; }  // add the checking of count (must be less 1000 euro)
+            get {return _countOfMoney; }  // add the checking of count (must be less 1000 euro)
             set { _countOfMoney = value; }
         }
+
+        public int Total { get; set; }
+
         #endregion
     }
 }

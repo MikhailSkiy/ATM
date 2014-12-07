@@ -12,6 +12,8 @@ namespace ATM
 {
     public partial class GeneralMenu : Form
     {
+        string _xmlPath = @"d:\\transactions.xml";
+
         // Initialize all windows, which user can choose
 
         TakeCashWindow takeCashWindow = new TakeCashWindow();
@@ -37,9 +39,11 @@ namespace ATM
             {
                 case "RUS":
                     ChangeLabels(this, languageSettings);
+                    takeCashWindow.SetLanguage(languageSettings);
                     break;
                 case "ENG":
                     ChangeLabels(this, languageSettings);
+                    takeCashWindow.SetLanguage(languageSettings);
                     break;
                 default:
                     break;
@@ -62,6 +66,13 @@ namespace ATM
             this.Hide();
             takeCashWindow.ShowDialog();
             this.Show();
+        }
+
+        private void btnCheckBalance_Click(object sender, EventArgs e)
+        {
+            Transaction lastTransaction = XmlHelper.GetLastTransaction(_xmlPath);
+            ShowTotal receipt = new ShowTotal(lastTransaction.Total.ToString());
+            receipt.ShowDialog();
         }
 
     }

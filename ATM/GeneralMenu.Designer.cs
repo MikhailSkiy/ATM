@@ -54,6 +54,7 @@
             this.btnCheckBalance.TabIndex = 1;
             this.btnCheckBalance.Text = "Check balance";
             this.btnCheckBalance.UseVisualStyleBackColor = true;
+            this.btnCheckBalance.Click += new System.EventHandler(this.btnCheckBalance_Click);
             // 
             // btnTransfer
             // 

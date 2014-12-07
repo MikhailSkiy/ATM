@@ -63,13 +63,39 @@
     <Compile Include="GeneralWindow.Designer.cs">
       <DependentUpon>GeneralWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="IncorrectPin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncorrectPin.Designer.cs">
+      <DependentUpon>IncorrectPin.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertPinWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InsufficientFunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsufficientFunds.Designer.cs">
+      <DependentUpon>InsufficientFunds.cs</DependentUpon>
+    </Compile>
     <Compile Include="LanguageHelper.cs" />
     <Compile Include="LanguageSettings.cs" />
+    <Compile Include="LanguageSettingsForReceipt.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="ShowTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTotal.Designer.cs">
+      <DependentUpon>ShowTotal.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeCashWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +103,12 @@
       <DependentUpon>TakeCashWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction.cs" />
+    <Compile Include="WithoutReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WithoutReceipt.Designer.cs">
+      <DependentUpon>WithoutReceipt.cs</DependentUpon>
+    </Compile>
     <Compile Include="WithReceiptWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,8 +122,14 @@
     <EmbeddedResource Include="GeneralMenu.resx">
       <DependentUpon>GeneralMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IncorrectPin.resx">
+      <DependentUpon>IncorrectPin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsertPinWindow.resx">
       <DependentUpon>InsertPinWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsufficientFunds.resx">
+      <DependentUpon>InsufficientFunds.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,9 +139,19 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTotal.resx">
+      <DependentUpon>ShowTotal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TakeCashWindow.resx">
       <DependentUpon>TakeCashWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WithoutReceipt.resx">
+      <DependentUpon>WithoutReceipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WithReceiptWindow.resx">
       <DependentUpon>WithReceiptWindow.cs</DependentUpon>
@@ -120,6 +168,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\flag-russia.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\uk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\629px-Use-an-ATM-Step-9-Version-2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
